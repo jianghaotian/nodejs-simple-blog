@@ -131,7 +131,7 @@ http.createServer((req, res) => {
                         "imgPath": "",
                         "chapterDes": content,
                         "chapterContent": content,
-                        "publishTimer": `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`,
+                        "publishTimer": `${date.getFullYear()}-${(date.getMonth()+1).length==1?'0'+(date.getMonth()+1):date.getMonth()+1}-${date.getDate().length==1?'0'+date.getDate():date.getDate()}`,
                         "author": "admin",
                         "views": 0
                     }

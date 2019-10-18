@@ -157,7 +157,7 @@
     $("#result").on("click", ".del_btn", function() {
         var r=confirm("确认删除吗？");
         if (r == true) {
-            chapterId = $(this).parent().parent().children("td")[0].innerHTML;
+            var chapterId = $(this).parent().parent().children("td")[0].innerHTML;
             $.get('/delChapter?chapterId=' + chapterId, (data) => {
                 data = JSON.parse(JSON.stringify(data));
                 if (data.code == 0) {

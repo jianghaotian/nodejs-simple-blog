@@ -111,12 +111,12 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
     $('#login').click(function() {
-        var uesrname = $('#username').val();
+        var username = $('#username').val();
         var pwd = $('#pwd').val();
-        if(uesrname == '' || pwd == '') {
+        if(username == '' || pwd == '') {
             alert("用户名或密码不能为空！");
         } else {
-            $.post("/getlogin", {'username': uesrname, 'password': pwd}, function(data) {
+            $.post("/getlogin", {'username': username, 'password': pwd}, function(data) {
                 if (data.code == 0) {
                     alert('登录成功！');
                     window.location = "/listmanager";

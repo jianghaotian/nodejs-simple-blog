@@ -42,7 +42,6 @@
         var search = window.location.search;
         var chapterId = search.substr(search.indexOf("=") + 1);
         $.get("/getDetail?chapterId=" + chapterId, function(data) {
-          console.log(data);
           var dataObj = JSON.parse(JSON.stringify(data));
           $("#title").html(dataObj[0]["chapterName"]);
           $("#publish").html(dataObj[0]["publishTimer"]);
